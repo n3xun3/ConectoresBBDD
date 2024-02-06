@@ -7,7 +7,7 @@ import org.conectores.persistencia.DaoCocheMySql;
 public class TestAltaCoche {
     public static void main(String[] args) {
         Coche coche = new Coche();
-        coche.setMarca("Renault");
+        coche.setMarca("Ford");
         coche.setColor("Blanco");
         coche.setAño(2024);
 

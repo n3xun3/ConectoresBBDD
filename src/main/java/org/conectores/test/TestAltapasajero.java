@@ -10,8 +10,8 @@ import org.conectores.persistencia.DaoPasajeroMySql;
 public class TestAltapasajero {
     public static void main(String[] args) {
         Pasajero pasajero = new Pasajero();
-        pasajero.setId(1);
-        pasajero.setNombre("Jorge");
+        pasajero.setId(2);
+        pasajero.setNombre("Jose");
         pasajero.setEdad(24);
         pasajero.setPeso(50.0);
 

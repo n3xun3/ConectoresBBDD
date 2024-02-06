@@ -3,10 +3,9 @@ package org.conectores.persistencia;
 import org.conectores.entidad.Pasajero;
 import org.conectores.interfaces.DaoPasajero;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DaoPasajeroMySql implements DaoPasajero {
 
@@ -93,6 +92,66 @@ public class DaoPasajeroMySql implements DaoPasajero {
         }
 
         return borrar;
+    }
+
+    @Override
+    // Método para obtener los pasajeros asociados a un coche
+    public List<Pasajero> obtenerPasajerosPorCoche(int idCoche) {
+        List<Pasajero> pasajeros = new ArrayList<>();
+
+        try {
+            abrirConexion();
+
+            String query = "SELECT p.id, p.nombre, p.edad, p.peso " +
+                    "FROM Pasajeros p " +
+                    "JOIN CochePasajero cp ON p.id = cp.id_pasajero " +
+                    "WHERE cp.id_coche = ?";
+            PreparedStatement ps = conexion.prepareStatement(query);
+            ps.setInt(1, idCoche);
+
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                Pasajero pasajero = new Pasajero();
+                pasajero.setId(rs.getInt("id"));
+                pasajero.setNombre(rs.getString("nombre"));
+                pasajero.setEdad(rs.getInt("edad"));
+                pasajero.setPeso(rs.getDouble("peso"));
+
+                pasajeros.add(pasajero);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            cerrarConexion();
+        }
+
+        return pasajeros;
+    }
+
+    @Override
+    public boolean relacionarPasajeroACoche(int idPasajero, int idCoche) {
+        try {
+            abrirConexion();
+
+            String query = "INSERT INTO CochePasajero (id_coche, id_pasajero) VALUES (?, ?)";
+            PreparedStatement ps = conexion.prepareStatement(query);
+            ps.setInt(1, idCoche);
+            ps.setInt(2, idPasajero);
+
+            int filasInsertadas = ps.executeUpdate();
+            if (filasInsertadas > 0) {
+                return true; // Se insertó correctamente
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            cerrarConexion();
+        }
+
+        return false; // No se pudo realizar la inserción
     }
 
 }
