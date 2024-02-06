@@ -76,4 +76,31 @@ public class DaoCocheMySql implements DaoCoche {
 
         return alta;
     }
+
+    @Override
+    public  boolean borrarCocheId(int idCoche){
+        if(!abrirConexion()){
+            return false;
+        }
+
+        boolean borrar = false;
+
+        String query = "DELETE FROM coches WHERE id = ?";
+
+        try (PreparedStatement ps = conexion.prepareStatement(query)) {
+            ps.setInt(1, idCoche);
+
+            int filasAfectadas = ps.executeUpdate();
+            if (filasAfectadas > 0) {
+                borrar = true;
+            }
+        } catch (SQLException e) {
+            System.out.println("Error al borrar el coche: " + e.getMessage());
+            e.printStackTrace();
+        } finally {
+            cerrarConexion();
+        }
+
+        return borrar;
+    }
 }
