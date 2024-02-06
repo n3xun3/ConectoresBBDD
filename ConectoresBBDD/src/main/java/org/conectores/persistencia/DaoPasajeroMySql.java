@@ -68,4 +68,31 @@ public class DaoPasajeroMySql implements DaoPasajero {
         return exito;
     }
 
+    @Override
+    public  boolean borrarPasajeroId(int idPasajero){
+        if(!abrirConexion()){
+            return false;
+        }
+
+        boolean borrar = false;
+
+        String query = "DELETE FROM pasajeros WHERE id = ?";
+
+        try (PreparedStatement ps = conexion.prepareStatement(query)) {
+            ps.setInt(1, idPasajero);
+
+            int filasAfectadas = ps.executeUpdate();
+            if (filasAfectadas > 0) {
+                borrar = true;
+            }
+        } catch (SQLException e) {
+            System.out.println("Error al borrar el pasajero: " + e.getMessage());
+            e.printStackTrace();
+        } finally {
+            cerrarConexion();
+        }
+
+        return borrar;
+    }
+
 }
