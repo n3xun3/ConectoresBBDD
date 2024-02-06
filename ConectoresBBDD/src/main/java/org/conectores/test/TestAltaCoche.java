@@ -4,7 +4,7 @@ import org.conectores.entidad.Coche;
 import org.conectores.interfaces.DaoCoche;
 import org.conectores.persistencia.DaoCocheMySql;
 
-public class TestAlta {
+public class TestAltaCoche {
     public static void main(String[] args) {
         Coche coche = new Coche();
         coche.setMarca("Renault");

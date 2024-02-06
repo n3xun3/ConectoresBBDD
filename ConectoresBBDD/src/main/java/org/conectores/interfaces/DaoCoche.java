@@ -1,2 +1,7 @@
-package org.conectores.interfaces;public class DaoCoche {
+package org.conectores.interfaces;
+
+import org.conectores.entidad.Coche;
+
+public interface DaoCoche {
+    boolean altaCoche(Coche coche);
 }
