@@ -4,20 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21fbd2cc-58fe-49a6-9f73-8c2cca4869ca" name="Changes" comment="cambios target">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestobtenerPasajerosPorCoche.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestrelacionarPasajeroACoche.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+    <list default="true" id="21fbd2cc-58fe-49a6-9f73-8c2cca4869ca" name="Changes" comment="añadimos métodos y test para relacion pasajero coche y mostrar los apsajeros relacionados con los coches">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestconsultarCocheId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestmostrarListadoCoches.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/interfaces/DaoPasajero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/interfaces/DaoPasajero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/persistencia/DaoPasajeroMySql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/persistencia/DaoPasajeroMySql.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestAltaCoche.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestAltaCoche.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestAltapasajero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestAltapasajero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/interfaces/DaoCoche.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/interfaces/DaoCoche.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/persistencia/DaoCocheMySql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/persistencia/DaoCocheMySql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/interfaces/DaoCoche.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/conectores/interfaces/DaoCoche.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/persistencia/DaoCocheMySql.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/conectores/persistencia/DaoCocheMySql.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +41,8 @@
   "keyToString": {
     "Application.TestAltaCoche.executor": "Run",
     "Application.TestAltapasajero.executor": "Run",
+    "Application.TestconsultarCocheId.executor": "Run",
+    "Application.TestmostrarListadoCoches.executor": "Run",
     "Application.TestobtenerPasajerosPorCoche.executor": "Run",
     "Application.TestrelacionarPasajeroACoche.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -67,7 +63,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TestobtenerPasajerosPorCoche">
+  <component name="RunManager" selected="Application.TestmostrarListadoCoches">
     <configuration name="TestAltaCoche" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.conectores.test.TestAltaCoche" />
       <module name="ConectoresBBDD" />
@@ -81,8 +77,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestAltapasajero" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.conectores.test.TestAltapasajero" />
+    <configuration name="TestconsultarCocheId" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.conectores.test.TestconsultarCocheId" />
+      <module name="ConectoresBBDD" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.conectores.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestmostrarListadoCoches" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.conectores.test.TestmostrarListadoCoches" />
       <module name="ConectoresBBDD" />
       <extension name="coverage">
         <pattern>
@@ -122,10 +131,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestmostrarListadoCoches" />
+        <item itemvalue="Application.TestconsultarCocheId" />
         <item itemvalue="Application.TestobtenerPasajerosPorCoche" />
         <item itemvalue="Application.TestAltaCoche" />
         <item itemvalue="Application.TestrelacionarPasajeroACoche" />
-        <item itemvalue="Application.TestAltapasajero" />
       </list>
     </recent_temporary>
   </component>
@@ -145,7 +155,8 @@
       <option name="presentableId" value="Default" />
       <updated>1707254283469</updated>
       <workItem from="1707254284749" duration="361000" />
-      <workItem from="1707254994238" duration="2702000" />
+      <workItem from="1707254994238" duration="5068000" />
+      <workItem from="1707407940542" duration="3140000" />
     </task>
     <task id="LOCAL-00001" summary="cambios target">
       <option name="closed" value="true" />
@@ -163,7 +174,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707255040388</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="añadimos métodos y test para relacion pasajero coche y mostrar los apsajeros relacionados con los coches">
+      <option name="closed" value="true" />
+      <created>1707258046031</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1707258046031</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,6 +190,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="cambios target" />
-    <option name="LAST_COMMIT_MESSAGE" value="cambios target" />
+    <MESSAGE value="añadimos métodos y test para relacion pasajero coche y mostrar los apsajeros relacionados con los coches" />
+    <option name="LAST_COMMIT_MESSAGE" value="añadimos métodos y test para relacion pasajero coche y mostrar los apsajeros relacionados con los coches" />
   </component>
 </project>

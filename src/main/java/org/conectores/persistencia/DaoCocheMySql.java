@@ -3,10 +3,7 @@ package org.conectores.persistencia;
 import org.conectores.entidad.Coche;
 import org.conectores.interfaces.DaoCoche;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 
 /**
  * Implementación de {@link DaoCoche} para el acceso a datos de coches utilizando MySQL.
@@ -103,4 +100,76 @@ public class DaoCocheMySql implements DaoCoche {
 
         return borrar;
     }
+
+    @Override
+    public Coche consultarCocheId(int idCoche) {
+        Coche coche = null;
+
+        if (!abrirConexion()) {
+            return null;
+        }
+
+        String query = "SELECT * FROM Coches WHERE id = ?";
+
+        try (PreparedStatement ps = conexion.prepareStatement(query)) {
+            ps.setInt(1, idCoche);
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+                coche = new Coche();
+                coche.setId(rs.getInt("id"));
+                coche.setMarca(rs.getString("marca"));
+                coche.setColor(rs.getString("color"));
+                coche.setAño(rs.getInt("año"));
+
+                System.out.println("Información del coche:");
+                System.out.println("ID: " + coche.getId());
+                System.out.println("Marca: " + coche.getMarca());
+                System.out.println("Color: " + coche.getColor());
+                System.out.println("Año: " + coche.getAño());
+                // Ajusta los nombres de las columnas según la estructura de tu tabla Coches
+            }
+        } catch (SQLException e) {
+            System.out.println("Error al consultar el coche: " + e.getMessage());
+            e.printStackTrace();
+        } finally {
+            cerrarConexion();
+        }
+
+        return coche;
+    }
+
+    @Override
+    public boolean mostrarListadoCoches() {
+        if (!abrirConexion()) {
+            return false;
+        }
+
+        boolean mostrar = false;
+
+        String query = "SELECT * FROM Coches";
+
+        try (PreparedStatement ps = conexion.prepareStatement(query)) {
+            ResultSet rs = ps.executeQuery();
+            mostrar = true;
+            System.out.println("Listado de coches:");
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String marca = rs.getString("marca");
+                String color = rs.getString("color");
+                int año = rs.getInt("año");
+                // Ajusta los nombres de las columnas según la estructura de tu tabla Coches
+
+                System.out.println("ID: " + id + ", Marca: " + marca + ", Color: " + color + ", Año: " + año);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error al mostrar el listado de coches: " + e.getMessage());
+            e.printStackTrace();
+        } finally {
+            cerrarConexion();
+        }
+        return mostrar;
+    }
+
+
 }
