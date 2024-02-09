@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21fbd2cc-58fe-49a6-9f73-8c2cca4869ca" name="Changes" comment="añadimos métodos y test consultar coche por id, mostrar listado de coche existentes.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/TesrmodificarCochePorId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/conectores/presentacion/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/interfaces/DaoCoche.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/negocio/DaoCoche.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/interfaces/DaoPasajero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/negocio/DaoPasajero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/persistencia/DaoCocheMySql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/persistencia/DaoCocheMySql.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/persistencia/DaoPasajeroMySql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/persistencia/DaoPasajeroMySql.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestAltaCoche.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestAltaCoche.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestAltapasajero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestAltapasajero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestBorrarCoche.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestBorrarCoche.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestBorrarPasajero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestBorrarPasajero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestconsultarCocheId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestconsultarCocheId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestmostrarListadoCoches.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestmostrarListadoCoches.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestobtenerPasajerosPorCoche.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestobtenerPasajerosPorCoche.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestrelacionarPasajeroACoche.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestrelacionarPasajeroACoche.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,39 +32,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.TestAltaCoche.executor&quot;: &quot;Run&quot;,
-    &quot;Application.TestAltapasajero.executor&quot;: &quot;Run&quot;,
-    &quot;Application.TestconsultarCocheId.executor&quot;: &quot;Run&quot;,
-    &quot;Application.TestmostrarListadoCoches.executor&quot;: &quot;Run&quot;,
-    &quot;Application.TestobtenerPasajerosPorCoche.executor&quot;: &quot;Run&quot;,
-    &quot;Application.TestrelacionarPasajeroACoche.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.TestAltaCoche.executor": "Run",
+    "Application.TestAltapasajero.executor": "Run",
+    "Application.TestconsultarCocheId.executor": "Run",
+    "Application.TestmostrarListadoCoches.executor": "Run",
+    "Application.TestobtenerPasajerosPorCoche.executor": "Run",
+    "Application.TestrelacionarPasajeroACoche.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "develop",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TesrmodificarCochePorId">
-    <configuration name="TesrmodificarCochePorId" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.conectores.test.TesrmodificarCochePorId" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.conectores.presentacion.Main" />
       <module name="ConectoresBBDD" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.conectores.test.*" />
+          <option name="PATTERN" value="org.conectores.presentacion.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -84,8 +73,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestAltaCoche" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.conectores.test.TestAltaCoche" />
+    <configuration name="TesrmodificarCochePorId" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.conectores.test.TesrmodificarCochePorId" />
       <module name="ConectoresBBDD" />
       <extension name="coverage">
         <pattern>
@@ -138,11 +127,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.TesrmodificarCochePorId" />
         <item itemvalue="Application.TestmostrarListadoCoches" />
         <item itemvalue="Application.TestconsultarCocheId" />
         <item itemvalue="Application.TestobtenerPasajerosPorCoche" />
-        <item itemvalue="Application.TestAltaCoche" />
       </list>
     </recent_temporary>
   </component>
