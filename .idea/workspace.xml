@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21fbd2cc-58fe-49a6-9f73-8c2cca4869ca" name="Changes" comment="añadimos métodos y test consultar coche por id, mostrar listado de coche existentes.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/conectores/presentacion/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="21fbd2cc-58fe-49a6-9f73-8c2cca4869ca" name="Changes" comment="añadimos parte de presentación con las opciones de Coche">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/persistencia/DaoCocheMySql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/persistencia/DaoCocheMySql.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +194,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707417437748</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="añadimos parte de presentación con las opciones de Coche">
+      <option name="closed" value="true" />
+      <created>1707498562939</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1707498562939</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,6 +212,7 @@
     <MESSAGE value="cambios target" />
     <MESSAGE value="añadimos métodos y test para relacion pasajero coche y mostrar los apsajeros relacionados con los coches" />
     <MESSAGE value="añadimos métodos y test consultar coche por id, mostrar listado de coche existentes." />
-    <option name="LAST_COMMIT_MESSAGE" value="añadimos métodos y test consultar coche por id, mostrar listado de coche existentes." />
+    <MESSAGE value="añadimos parte de presentación con las opciones de Coche" />
+    <option name="LAST_COMMIT_MESSAGE" value="añadimos parte de presentación con las opciones de Coche" />
   </component>
 </project>

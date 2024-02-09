@@ -75,19 +75,26 @@ public class DaoCocheMySql implements DaoCoche {
     }
 
     @Override
-    public  boolean borrarCocheId(int idCoche){
-        if(!abrirConexion()){
+    public boolean borrarCocheId(int idCoche) {
+        if (!abrirConexion()) {
             return false;
         }
 
         boolean borrar = false;
 
-        String query = "DELETE FROM coches WHERE id = ?";
+        String queryDeleteCochepasajero = "DELETE FROM cochepasajero WHERE id_coche = ?";
+        String queryDeleteCoche = "DELETE FROM coches WHERE id = ?";
 
-        try (PreparedStatement ps = conexion.prepareStatement(query)) {
-            ps.setInt(1, idCoche);
+        try {
+            // Eliminar registros relacionados en la tabla cochepasajero
+            PreparedStatement psDeleteCochepasajero = conexion.prepareStatement(queryDeleteCochepasajero);
+            psDeleteCochepasajero.setInt(1, idCoche);
+            psDeleteCochepasajero.executeUpdate();
 
-            int filasAfectadas = ps.executeUpdate();
+            // Eliminar la fila de la tabla coches
+            PreparedStatement psDeleteCoche = conexion.prepareStatement(queryDeleteCoche);
+            psDeleteCoche.setInt(1, idCoche);
+            int filasAfectadas = psDeleteCoche.executeUpdate();
             if (filasAfectadas > 0) {
                 borrar = true;
             }
@@ -100,6 +107,7 @@ public class DaoCocheMySql implements DaoCoche {
 
         return borrar;
     }
+
 
     @Override
     public Coche consultarCocheId(int idCoche) {
