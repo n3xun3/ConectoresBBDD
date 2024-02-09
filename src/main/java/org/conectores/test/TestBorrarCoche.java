@@ -1,7 +1,6 @@
 package org.conectores.test;
 
-import org.conectores.entidad.Coche;
-import org.conectores.interfaces.DaoCoche;
+import org.conectores.negocio.DaoCoche;
 import org.conectores.persistencia.DaoCocheMySql;
 
 public class TestBorrarCoche {

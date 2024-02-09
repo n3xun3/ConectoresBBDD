@@ -1,6 +1,6 @@
 package org.conectores.test;
 
-import org.conectores.interfaces.DaoCoche;
+import org.conectores.negocio.DaoCoche;
 import org.conectores.persistencia.DaoCocheMySql;
 
 public class TestmostrarListadoCoches {

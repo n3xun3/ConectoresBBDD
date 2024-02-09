@@ -1,7 +1,7 @@
 package org.conectores.persistencia;
 
 import org.conectores.entidad.Pasajero;
-import org.conectores.interfaces.DaoPasajero;
+import org.conectores.negocio.DaoPasajero;
 
 import java.sql.*;
 import java.util.ArrayList;

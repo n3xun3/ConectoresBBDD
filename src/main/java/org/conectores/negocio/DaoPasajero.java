@@ -1,4 +1,4 @@
-package org.conectores.interfaces;
+package org.conectores.negocio;
 
 import org.conectores.entidad.Pasajero;
 

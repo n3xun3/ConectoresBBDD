@@ -1,8 +1,6 @@
 package org.conectores.test;
 
-import org.conectores.interfaces.DaoCoche;
-import org.conectores.interfaces.DaoPasajero;
-import org.conectores.persistencia.DaoCocheMySql;
+import org.conectores.negocio.DaoPasajero;
 import org.conectores.persistencia.DaoPasajeroMySql;
 
 public class TestBorrarPasajero {

@@ -1,7 +1,7 @@
 package org.conectores.persistencia;
 
 import org.conectores.entidad.Coche;
-import org.conectores.interfaces.DaoCoche;
+import org.conectores.negocio.DaoCoche;
 
 import java.sql.*;
 
@@ -171,5 +171,34 @@ public class DaoCocheMySql implements DaoCoche {
         return mostrar;
     }
 
+    @Override
+    public boolean modificarCochePorId(int id, Coche coche) {
+        if (!abrirConexion()) {
+            return false;
+        }
+
+        boolean modificado = false;
+
+        String query = "UPDATE coches SET MARCA = ?, COLOR = ?, AÑO = ? WHERE ID = ?";
+
+        try (PreparedStatement ps = conexion.prepareStatement(query)) {
+            ps.setString(1, coche.getMarca());
+            ps.setString(2, coche.getColor());
+            ps.setInt(3, coche.getAño());
+            ps.setInt(4, id);
+
+            int filasAfectadas = ps.executeUpdate();
+            if (filasAfectadas > 0) {
+                modificado = true;
+            }
+        } catch (SQLException e) {
+            System.out.println("Error al modificar el coche: " + e.getMessage());
+            e.printStackTrace();
+        } finally {
+            cerrarConexion();
+        }
+
+        return modificado;
+    }
 
 }

@@ -1,7 +1,7 @@
 package org.conectores.test;
 
 import org.conectores.entidad.Pasajero;
-import org.conectores.interfaces.DaoPasajero;
+import org.conectores.negocio.DaoPasajero;
 import org.conectores.persistencia.DaoPasajeroMySql;
 
 import java.util.List;

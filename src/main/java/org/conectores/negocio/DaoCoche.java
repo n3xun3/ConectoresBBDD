@@ -1,4 +1,4 @@
-package org.conectores.interfaces;
+package org.conectores.negocio;
 
 import org.conectores.entidad.Coche;
 
@@ -9,4 +9,6 @@ public interface DaoCoche {
     Coche consultarCocheId(int idCoche);
 
     boolean mostrarListadoCoches();
+
+    boolean modificarCochePorId(int id, Coche coche);
 }

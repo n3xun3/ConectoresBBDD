@@ -1,10 +1,8 @@
 package org.conectores.test;
 
 import org.conectores.entidad.Coche;
-import org.conectores.interfaces.DaoCoche;
-import org.conectores.interfaces.DaoPasajero;
+import org.conectores.negocio.DaoCoche;
 import org.conectores.persistencia.DaoCocheMySql;
-import org.conectores.persistencia.DaoPasajeroMySql;
 
 public class TestconsultarCocheId {
     public static void main(String[] args){
