@@ -68,6 +68,44 @@ public class DaoPasajeroMySql implements DaoPasajero {
     }
 
     @Override
+    public Pasajero consultarPasajeroId(int idPasajero) {
+        Pasajero pasajero = null;
+
+        if (!abrirConexion()) {
+            return null;
+        }
+
+        String query = "SELECT * FROM Pasajeros WHERE id = ?";
+
+        try (PreparedStatement ps = conexion.prepareStatement(query)) {
+            ps.setInt(1, idPasajero);
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+                pasajero = new Pasajero();
+                pasajero.setId(rs.getInt("id"));
+                pasajero.setNombre(rs.getString("nombre"));
+                pasajero.setEdad(rs.getInt("edad"));
+                pasajero.setPeso(rs.getInt("peso"));
+
+                System.out.println("Información del coche:");
+                System.out.println("ID: " + pasajero.getId());
+                System.out.println("Nombre: " + pasajero.getNombre());
+                System.out.println("Edad: " + pasajero.getEdad());
+                System.out.println("Peso: " + pasajero.getPeso());
+                // Ajusta los nombres de las columnas según la estructura de tu tabla Coches
+            }
+        } catch (SQLException e) {
+            System.out.println("Error al consultar el coche: " + e.getMessage());
+            e.printStackTrace();
+        } finally {
+            cerrarConexion();
+        }
+
+        return pasajero;
+    }
+
+    @Override
     public  boolean borrarPasajeroId(int idPasajero){
         if(!abrirConexion()){
             return false;
@@ -92,6 +130,68 @@ public class DaoPasajeroMySql implements DaoPasajero {
         }
 
         return borrar;
+    }
+
+    @Override
+    public boolean modificarPasajeroPorId(int id, Pasajero pasajero) {
+        if (!abrirConexion()) {
+            return false;
+        }
+
+        boolean modificado = false;
+
+        String query = "UPDATE pasajeros SET NOMBRE = ?, EDAD = ?, PESO = ? WHERE ID = ?";
+
+        try (PreparedStatement ps = conexion.prepareStatement(query)) {
+            ps.setString(1, pasajero.getNombre());
+            ps.setInt(2, pasajero.getEdad());
+            ps.setDouble(3, pasajero.getPeso());
+            ps.setInt(4, id);
+
+            int filasAfectadas = ps.executeUpdate();
+            if (filasAfectadas > 0) {
+                modificado = true;
+            }
+        } catch (SQLException e) {
+            System.out.println("Error al modificar el pasajero: " + e.getMessage());
+            e.printStackTrace();
+        } finally {
+            cerrarConexion();
+        }
+
+        return modificado;
+    }
+
+    @Override
+    public boolean mostrarListadoPasajeros() {
+        if (!abrirConexion()) {
+            return false;
+        }
+
+        boolean mostrar = false;
+
+        String query = "SELECT * FROM pasajeros";
+
+        try (PreparedStatement ps = conexion.prepareStatement(query)) {
+            ResultSet rs = ps.executeQuery();
+            mostrar = true;
+            System.out.println("Listado de Pasajeros:");
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String nombre = rs.getString("nombre");
+                int edad = rs.getInt("edad");
+                int peso = rs.getInt("peso");
+                // Ajusta los nombres de las columnas según la estructura de tu tabla Coches
+
+                System.out.println("ID: " + id + ", Nombre: " + nombre + ", Edad: " + edad + ", Pesp: " + peso);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error al mostrar el listado de Psajeros: " + e.getMessage());
+            e.printStackTrace();
+        } finally {
+            cerrarConexion();
+        }
+        return mostrar;
     }
 
     @Override
@@ -152,6 +252,28 @@ public class DaoPasajeroMySql implements DaoPasajero {
         }
 
         return false; // No se pudo realizar la inserción
+    }
+    @Override
+    public boolean eliminarPasajeroDeCoche(int idPasajero, int idCoche) {
+        try {
+            abrirConexion();
+
+            String query = "DELETE FROM CochePasajero WHERE id_pasajero = ? AND id_coche = ?";
+            PreparedStatement ps = conexion.prepareStatement(query);
+            ps.setInt(1, idPasajero);
+            ps.setInt(2, idCoche);
+
+            int filasEliminadas = ps.executeUpdate();
+            if (filasEliminadas > 0) {
+                return true; // Se eliminó correctamente la relación pasajero-coche
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            cerrarConexion();
+        }
+
+        return false; // No se pudo eliminar la relación pasajero-coche
     }
 
 }

@@ -1,4 +1,4 @@
-package org.conectores.test;
+package org.conectores.test.pasajero;
 
 import org.conectores.negocio.DaoPasajero;
 import org.conectores.persistencia.DaoPasajeroMySql;

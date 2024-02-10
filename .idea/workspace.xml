@@ -4,8 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21fbd2cc-58fe-49a6-9f73-8c2cca4869ca" name="Changes" comment="añadimos parte de presentación con las opciones de Coche">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/persistencia/DaoCocheMySql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/persistencia/DaoCocheMySql.java" afterDir="false" />
+    <list default="true" id="21fbd2cc-58fe-49a6-9f73-8c2cca4869ca" name="Changes" comment="Solucion error debemos eliminar antes los registros relacionados en la tabla cochespasajeros que hacen referencia a la fila que queremos eliminar de coches">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/pasajero/TestconsultarPasajeroId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/pasajero/TestmostrarListadoPasajeros.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/negocio/DaoPasajero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/negocio/DaoPasajero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/persistencia/DaoPasajeroMySql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/persistencia/DaoPasajeroMySql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/presentacion/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/presentacion/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/test/TesrmodificarCochePorId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/coche/TesrmodificarCochePorId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestAltaCoche.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/coche/TestAltaCoche.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestAltapasajero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/pasajero/TestAltapasajero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestBorrarCoche.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/coche/TestBorrarCoche.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestBorrarPasajero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/pasajero/TestBorrarPasajero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestconsultarCocheId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/coche/TestconsultarCocheId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestmostrarListadoCoches.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/coche/TestmostrarListadoCoches.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestobtenerPasajerosPorCoche.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/pasajero/TestobtenerPasajerosPorCoche.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestrelacionarPasajeroACoche.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/pasajero/TestrelacionarPasajeroACoche.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/negocio/DaoPasajero.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/persistencia/DaoPasajeroMySql.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/presentacion/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/conectores/presentacion/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/test/TesrmodificarCochePorId.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/test/TestAltaCoche.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/test/TestAltapasajero.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/test/TestBorrarCoche.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/test/TestBorrarPasajero.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/test/TestconsultarCocheId.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/test/TestmostrarListadoCoches.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/test/TestobtenerPasajerosPorCoche.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/test/TestrelacionarPasajeroACoche.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +64,9 @@
     "Application.TestAltaCoche.executor": "Run",
     "Application.TestAltapasajero.executor": "Run",
     "Application.TestconsultarCocheId.executor": "Run",
+    "Application.TestconsultarPasajeroId.executor": "Run",
     "Application.TestmostrarListadoCoches.executor": "Run",
+    "Application.TestmostrarListadoPasajeros.executor": "Run",
     "Application.TestobtenerPasajerosPorCoche.executor": "Run",
     "Application.TestrelacionarPasajeroACoche.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -72,12 +101,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TesrmodificarCochePorId" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.conectores.test.TesrmodificarCochePorId" />
+    <configuration name="TestconsultarPasajeroId" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.conectores.test.pasajero.TestconsultarPasajeroId" />
       <module name="ConectoresBBDD" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.conectores.test.*" />
+          <option name="PATTERN" value="org.conectores.test.pasajero.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -85,25 +114,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestconsultarCocheId" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.conectores.test.TestconsultarCocheId" />
+    <configuration name="TestmostrarListadoPasajeros" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.conectores.test.pasajero.TestmostrarListadoPasajeros" />
       <module name="ConectoresBBDD" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.conectores.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestmostrarListadoCoches" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.conectores.test.TestmostrarListadoCoches" />
-      <module name="ConectoresBBDD" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.conectores.test.*" />
+          <option name="PATTERN" value="org.conectores.test.pasajero.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -112,11 +128,24 @@
       </method>
     </configuration>
     <configuration name="TestobtenerPasajerosPorCoche" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.conectores.test.TestobtenerPasajerosPorCoche" />
+      <option name="MAIN_CLASS_NAME" value="org.conectores.test.pasajero.TestobtenerPasajerosPorCoche" />
       <module name="ConectoresBBDD" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.conectores.test.*" />
+          <option name="PATTERN" value="org.conectores.test.pasajero.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestrelacionarPasajeroACoche" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.conectores.test.pasajero.TestrelacionarPasajeroACoche" />
+      <module name="ConectoresBBDD" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.conectores.test.pasajero.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -127,10 +156,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.TesrmodificarCochePorId" />
-        <item itemvalue="Application.TestmostrarListadoCoches" />
-        <item itemvalue="Application.TestconsultarCocheId" />
+        <item itemvalue="Application.TestmostrarListadoPasajeros" />
         <item itemvalue="Application.TestobtenerPasajerosPorCoche" />
+        <item itemvalue="Application.TestrelacionarPasajeroACoche" />
+        <item itemvalue="Application.TestconsultarPasajeroId" />
       </list>
     </recent_temporary>
   </component>
@@ -202,7 +231,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707498562939</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Solucion error debemos eliminar antes los registros relacionados en la tabla cochespasajeros que hacen referencia a la fila que queremos eliminar de coches">
+      <option name="closed" value="true" />
+      <created>1707498885041</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1707498885041</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,6 +250,18 @@
     <MESSAGE value="añadimos métodos y test para relacion pasajero coche y mostrar los apsajeros relacionados con los coches" />
     <MESSAGE value="añadimos métodos y test consultar coche por id, mostrar listado de coche existentes." />
     <MESSAGE value="añadimos parte de presentación con las opciones de Coche" />
-    <option name="LAST_COMMIT_MESSAGE" value="añadimos parte de presentación con las opciones de Coche" />
+    <MESSAGE value="Solucion error debemos eliminar antes los registros relacionados en la tabla cochespasajeros que hacen referencia a la fila que queremos eliminar de coches" />
+    <option name="LAST_COMMIT_MESSAGE" value="Solucion error debemos eliminar antes los registros relacionados en la tabla cochespasajeros que hacen referencia a la fila que queremos eliminar de coches" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/conectores/presentacion/Main.java</url>
+          <line>285</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

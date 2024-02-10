@@ -1,4 +1,4 @@
-package org.conectores.test;
+package org.conectores.test.pasajero;
 
 import org.conectores.entidad.Pasajero;
 import org.conectores.negocio.DaoPasajero;
@@ -10,7 +10,7 @@ public class TestobtenerPasajerosPorCoche {
     public static void main(String[] args){
 
         DaoPasajero ps = new DaoPasajeroMySql();
-        int idCoche = 1;
+        int idCoche = 3;
         List<Pasajero> pasajeros = ps.obtenerPasajerosPorCoche(idCoche);
         if(pasajeros.size() > 0){
             System.out.println("El pasajero se relacionado con coche.");

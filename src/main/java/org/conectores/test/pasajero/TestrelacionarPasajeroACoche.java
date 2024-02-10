@@ -1,4 +1,4 @@
-package org.conectores.test;
+package org.conectores.test.pasajero;
 
 import org.conectores.negocio.DaoPasajero;
 import org.conectores.persistencia.DaoPasajeroMySql;
@@ -8,7 +8,7 @@ public class TestrelacionarPasajeroACoche {
 
         DaoPasajero ps = new DaoPasajeroMySql();
         int idPasajero = 2;
-        int idCoche = 1;
+        int idCoche = 3;
         boolean borrado = ps.relacionarPasajeroACoche(idPasajero,idCoche);
         if(borrado){
             System.out.println("El pasajero se relacionado con coche.");

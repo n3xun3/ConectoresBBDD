@@ -1,4 +1,4 @@
-package org.conectores.test;
+package org.conectores.test.pasajero;
 
 import org.conectores.entidad.Pasajero;
 import org.conectores.negocio.DaoPasajero;

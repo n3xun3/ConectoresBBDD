@@ -1,4 +1,4 @@
-package org.conectores.test;
+package org.conectores.test.coche;
 
 import org.conectores.entidad.Coche;
 import org.conectores.negocio.DaoCoche;
@@ -8,12 +8,12 @@ public class TestconsultarCocheId {
     public static void main(String[] args){
 
         DaoCoche ps = new DaoCocheMySql();
-        int idCoche = 1;
+        int idCoche = 2;
         Coche borrado = ps.consultarCocheId(idCoche);
         if(borrado != null){
-            System.out.println("El pasajero se ha eliminado.");
+            System.out.println("El pasajero se consulto correctamente.");
         } else {
-            System.out.println("El pasajero NO se ha eliminado.");
+            System.out.println("El pasajero NO consulto correctamente.");
         }
     }
 }

@@ -1,4 +1,4 @@
-package org.conectores.test;
+package org.conectores.test.coche;
 
 import org.conectores.entidad.Coche;
 import org.conectores.negocio.DaoCoche;
