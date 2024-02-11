@@ -45,6 +45,10 @@ public class DaoCocheMySql implements DaoCoche {
         return true;
     }
 
+    public boolean validarMarcaModeloNoVacios(Coche coche) {
+        return !coche.getMarca().isEmpty() && !coche.getModelo().isEmpty();
+    }
+
     @Override
     public boolean altaCoche(Coche coche){
         if(!abrirConexion()){
@@ -53,24 +57,28 @@ public class DaoCocheMySql implements DaoCoche {
 
         boolean alta = false;
 
-        String query = "insert into coches (MARCA,COLOR,AÑO) " + " values(?,?,?)";
+        String query = "insert into coches (MARCA,MOOELO,AÑO) " + " values(?,?,?)";
 
-        try (PreparedStatement ps = conexion.prepareStatement(query)) {
-            ps.setString(1, coche.getMarca());
-            ps.setString(2, coche.getColor());
-            ps.setInt(3, coche.getAño());
+        if (validarMarcaModeloNoVacios(coche)) {
 
-            int filasAfectadas = ps.executeUpdate();
-            if (filasAfectadas > 0) {
-                alta = true;
+            try (PreparedStatement ps = conexion.prepareStatement(query)) {
+                ps.setString(1, coche.getMarca());
+                ps.setString(2, coche.getModelo());
+                ps.setInt(3, coche.getAño());
+
+                int filasAfectadas = ps.executeUpdate();
+                if (filasAfectadas > 0) {
+                    alta = true;
+                }
+            } catch (SQLException e) {
+                System.out.println("Error al añadir el coche: " + e.getMessage());
+                e.printStackTrace();
+            } finally {
+                cerrarConexion();
             }
-        } catch (SQLException e) {
-            System.out.println("Error al añadir el coche: " + e.getMessage());
-            e.printStackTrace();
-        } finally {
-            cerrarConexion();
+        } else {
+            System.out.println("Error: La marca y el modelo no pueden estar vacíos.");
         }
-
         return alta;
     }
 
@@ -127,13 +135,13 @@ public class DaoCocheMySql implements DaoCoche {
                 coche = new Coche();
                 coche.setId(rs.getInt("id"));
                 coche.setMarca(rs.getString("marca"));
-                coche.setColor(rs.getString("color"));
+                coche.setModelo(rs.getString("modelo"));
                 coche.setAño(rs.getInt("año"));
 
                 System.out.println("Información del coche:");
                 System.out.println("ID: " + coche.getId());
                 System.out.println("Marca: " + coche.getMarca());
-                System.out.println("Color: " + coche.getColor());
+                System.out.println("Modelo: " + coche.getModelo());
                 System.out.println("Año: " + coche.getAño());
                 // Ajusta los nombres de las columnas según la estructura de tu tabla Coches
             }
@@ -164,11 +172,11 @@ public class DaoCocheMySql implements DaoCoche {
             while (rs.next()) {
                 int id = rs.getInt("id");
                 String marca = rs.getString("marca");
-                String color = rs.getString("color");
+                String modelo = rs.getString("modelo");
                 int año = rs.getInt("año");
                 // Ajusta los nombres de las columnas según la estructura de tu tabla Coches
 
-                System.out.println("ID: " + id + ", Marca: " + marca + ", Color: " + color + ", Año: " + año);
+                System.out.println("ID: " + id + ", Marca: " + marca + ", Modelo: " + modelo + ", Año: " + año);
             }
         } catch (SQLException e) {
             System.out.println("Error al mostrar el listado de coches: " + e.getMessage());
@@ -187,23 +195,28 @@ public class DaoCocheMySql implements DaoCoche {
 
         boolean modificado = false;
 
-        String query = "UPDATE coches SET MARCA = ?, COLOR = ?, AÑO = ? WHERE ID = ?";
+        String query = "UPDATE coches SET MARCA = ?, MODELO = ?, AÑO = ? WHERE ID = ?";
 
-        try (PreparedStatement ps = conexion.prepareStatement(query)) {
-            ps.setString(1, coche.getMarca());
-            ps.setString(2, coche.getColor());
-            ps.setInt(3, coche.getAño());
-            ps.setInt(4, id);
+        if (validarMarcaModeloNoVacios(coche)) {
 
-            int filasAfectadas = ps.executeUpdate();
-            if (filasAfectadas > 0) {
-                modificado = true;
+            try (PreparedStatement ps = conexion.prepareStatement(query)) {
+                ps.setString(1, coche.getMarca());
+                ps.setString(2, coche.getModelo());
+                ps.setInt(3, coche.getAño());
+                ps.setInt(4, id);
+
+                int filasAfectadas = ps.executeUpdate();
+                if (filasAfectadas > 0) {
+                    modificado = true;
+                }
+            } catch (SQLException e) {
+                System.out.println("Error al modificar el coche: " + e.getMessage());
+                e.printStackTrace();
+            } finally {
+                cerrarConexion();
             }
-        } catch (SQLException e) {
-            System.out.println("Error al modificar el coche: " + e.getMessage());
-            e.printStackTrace();
-        } finally {
-            cerrarConexion();
+        } else {
+            System.out.println("Error: La marca y el modelo no pueden estar vacíos.");
         }
 
         return modificado;

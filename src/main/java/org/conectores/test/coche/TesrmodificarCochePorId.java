@@ -8,7 +8,7 @@ public class TesrmodificarCochePorId {
     public static void main(String[] args) {
         Coche coche = new Coche();
         coche.setMarca("Ford");
-        coche.setColor("Azul");
+        coche.setModelo("Azul");
         coche.setAño(2024);
 
         DaoCoche dc = new DaoCocheMySql();

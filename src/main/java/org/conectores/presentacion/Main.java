@@ -2,7 +2,6 @@ package org.conectores.presentacion;
 
 import org.conectores.entidad.Coche;
 import org.conectores.entidad.Pasajero;
-import org.conectores.negocio.DaoPasajero;
 import org.conectores.persistencia.DaoCocheMySql;
 import org.conectores.persistencia.DaoPasajeroMySql;
 
@@ -126,6 +125,7 @@ public class Main {
                     mostrarListadoPsajeros();
                     break;
                 case 5:
+                    borrarPasajeroId();
                     break;
                 case 6:
                     relacionarPasajeroACoche();
@@ -147,13 +147,13 @@ public class Main {
 
 
 
-
+    // Métodos coche
     private static void agregarCoche() {
         System.out.println("Ingrese la marca del coche:");
         String marca = scanner.nextLine();
 
-        System.out.println("Ingrese el color del coche:");
-        String color = scanner.nextLine();
+        System.out.println("Ingrese el modelo del coche:");
+        String modelo = scanner.nextLine();
 
         System.out.println("Ingrese el año del coche:");
         int año = scanner.nextInt();
@@ -161,7 +161,7 @@ public class Main {
 
         Coche coche = new Coche();
         coche.setMarca(marca);
-        coche.setColor(color);
+        coche.setModelo(modelo);
         coche.setAño(año);
         boolean altaExitosa = daoCoche.altaCoche(coche);
         if (altaExitosa) {
@@ -179,8 +179,8 @@ public class Main {
         System.out.println("Ingrese la nueva marca del coche:");
         String marca = scanner.nextLine();
 
-        System.out.println("Ingrese el nuevo color del coche:");
-        String color = scanner.nextLine();
+        System.out.println("Ingrese el nuevo modelo del coche:");
+        String modelo = scanner.nextLine();
 
         System.out.println("Ingrese el nuevo año del coche:");
         int año = scanner.nextInt();
@@ -188,7 +188,7 @@ public class Main {
 
         Coche coche = new Coche();
         coche.setMarca(marca);
-        coche.setColor(color);
+        coche.setModelo(modelo);
         coche.setAño(año);
         boolean modificado = daoCoche.modificarCochePorId(id, coche);
         if (modificado) {
@@ -208,7 +208,7 @@ public class Main {
             System.out.println("Información del coche:");
             System.out.println("ID: " + coche.getId());
             System.out.println("Marca: " + coche.getMarca());
-            System.out.println("Color: " + coche.getColor());
+            System.out.println("Color: " + coche.getModelo());
             System.out.println("Año: " + coche.getAño());
         } else {
             System.out.println("No se encontró ningún coche con el ID proporcionado.");
@@ -235,6 +235,7 @@ public class Main {
         }
     }
 
+    // Métodos pasajero
     private static void agregarPasajero() {
         System.out.println("Ingrese el nombre del pasajero:");
         String npmbre = scanner.nextLine();
@@ -302,6 +303,19 @@ public class Main {
         }
     }
 
+    private static void borrarPasajeroId(){
+        System.out.println("Ingrese el ID del pasajero que desea borrar:");
+        int idPasajero = scanner.nextInt();
+        scanner.nextLine();
+        boolean eliminar = daoPasajero.borrarPasajeroId(idPasajero);
+        if (eliminar) {
+            System.out.println("Pasajero eliminado correctamente.");
+        } else {
+            System.out.println("Error al eliminar el Pasajero.");
+        }
+
+    }
+
     private static void mostrarListadoPsajeros() {
         boolean mostrado = daoPasajero.mostrarListadoPasajeros();
         if (!mostrado) {
@@ -341,7 +355,20 @@ public class Main {
     }
 
     private static void eliminarPasajeroDeCoche(){
+        System.out.println("Ingrese el ID del pasajero :");
+        int idPasajero = scanner.nextInt();
+        scanner.nextLine(); // Consumir el salto de línea pendiente
 
+        System.out.println("Ingrese el ID del coche :");
+        int idCoche = scanner.nextInt();
+        scanner.nextLine(); // Consumir el salto de línea pendiente
+
+        boolean eliminarPasajero = daoPasajero.eliminarPasajeroDeCoche(idPasajero,idCoche);
+        if(eliminarPasajero){
+            System.out.println("El pasajero se ha eliminado del coche coche.");
+        } else {
+            System.out.println("El pasajero NO se eliminado del coche.");
+        }
     }
 
 

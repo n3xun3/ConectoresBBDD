@@ -8,7 +8,7 @@ public class TestAltaCoche {
     public static void main(String[] args) {
         Coche coche = new Coche();
         coche.setMarca("Ford");
-        coche.setColor("Blanco");
+        coche.setModelo("Blanco");
         coche.setAño(2024);
 
         DaoCoche dc = new DaoCocheMySql();

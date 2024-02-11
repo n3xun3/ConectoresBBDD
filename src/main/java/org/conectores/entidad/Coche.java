@@ -3,7 +3,7 @@ package org.conectores.entidad;
 public class Coche {
     private int id;
     private String marca;
-    private String color;
+    private String modelo;
     private int año;
 
 
@@ -23,12 +23,12 @@ public class Coche {
         this.marca = marca;
     }
 
-    public String getColor() {
-        return color;
+    public String getModelo() {
+        return modelo;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
     }
 
     public int getAño() {
@@ -40,6 +40,6 @@ public class Coche {
     }
 
     public String toString(){
-        return "Coche [id=" + id + ", marca=" + marca + ", color" + color + ",año" + año + "]";
+        return "Coche [id=" + id + ", marca=" + marca + ", modelo" + modelo + ",año" + año + "]";
     }
 }
