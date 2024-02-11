@@ -6,6 +6,7 @@ import org.conectores.negocio.DaoPasajero;
 import org.conectores.persistencia.DaoCocheMySql;
 import org.conectores.persistencia.DaoPasajeroMySql;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -125,13 +126,15 @@ public class Main {
                     mostrarListadoPsajeros();
                     break;
                 case 5:
-                    //añadirPasajeroACoche();
                     break;
                 case 6:
-                    //eliminarPasajeroDeCoche();
+                    relacionarPasajeroACoche();
                     break;
                 case 7:
-                    //listarPasajerosDeCoche();
+                    eliminarPasajeroDeCoche();
+                    break;
+                case 8:
+                    obtenerPasajerosPorCoche();
                     break;
                 case 0:
                     continuarGestion = false;
@@ -304,6 +307,41 @@ public class Main {
         if (!mostrado) {
             System.out.println("Error al mostrar el listado de coches.");
         }
+    }
+
+    private static void relacionarPasajeroACoche(){
+
+        System.out.println("Ingrese el ID del pasajero :");
+        int idPasajero = scanner.nextInt();
+        scanner.nextLine(); // Consumir el salto de línea pendiente
+
+        System.out.println("Ingrese el ID del coche :");
+        int idCoche = scanner.nextInt();
+        scanner.nextLine(); // Consumir el salto de línea pendiente
+
+        boolean relacion = daoPasajero.relacionarPasajeroACoche(idPasajero,idCoche);
+        if(relacion){
+            System.out.println("El pasajero se relacionado con coche.");
+        } else {
+            System.out.println("El pasajero NO se relacionado con coche.");
+        }
+    }
+
+    private static void obtenerPasajerosPorCoche(){
+        System.out.println("Ingrese el ID del coche :");
+        int idCoche = scanner.nextInt();
+        scanner.nextLine(); // Consumir el salto de línea pendiente
+        List<Pasajero> pasajeros = daoPasajero.obtenerPasajerosPorCoche(idCoche);
+        if(pasajeros.size() > 0){
+            System.out.println("El pasajero se relacionado con coche.");
+            System.out.println(pasajeros);
+        } else {
+            System.out.println("El coche NO tiene ningún pasajero asociado.");
+        }
+    }
+
+    private static void eliminarPasajeroDeCoche(){
+
     }
 
 

@@ -4,35 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21fbd2cc-58fe-49a6-9f73-8c2cca4869ca" name="Changes" comment="Solucion error debemos eliminar antes los registros relacionados en la tabla cochespasajeros que hacen referencia a la fila que queremos eliminar de coches">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/pasajero/TestconsultarPasajeroId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/pasajero/TestmostrarListadoPasajeros.java" afterDir="false" />
+    <list default="true" id="21fbd2cc-58fe-49a6-9f73-8c2cca4869ca" name="Changes" comment="Test y parte visual de pasajeros">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/negocio/DaoPasajero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/negocio/DaoPasajero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/persistencia/DaoPasajeroMySql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/persistencia/DaoPasajeroMySql.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/presentacion/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/presentacion/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/test/TesrmodificarCochePorId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/coche/TesrmodificarCochePorId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestAltaCoche.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/coche/TestAltaCoche.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestAltapasajero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/pasajero/TestAltapasajero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestBorrarCoche.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/coche/TestBorrarCoche.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestBorrarPasajero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/pasajero/TestBorrarPasajero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestconsultarCocheId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/coche/TestconsultarCocheId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestmostrarListadoCoches.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/coche/TestmostrarListadoCoches.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestobtenerPasajerosPorCoche.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/pasajero/TestobtenerPasajerosPorCoche.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/test/TestrelacionarPasajeroACoche.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/pasajero/TestrelacionarPasajeroACoche.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/negocio/DaoPasajero.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/persistencia/DaoPasajeroMySql.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/presentacion/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/conectores/presentacion/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/test/TesrmodificarCochePorId.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/test/TestAltaCoche.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/test/TestAltapasajero.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/test/TestBorrarCoche.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/test/TestBorrarPasajero.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/test/TestconsultarCocheId.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/test/TestmostrarListadoCoches.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/test/TestobtenerPasajerosPorCoche.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/test/TestrelacionarPasajeroACoche.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,7 +213,23 @@
       <option name="project" value="LOCAL" />
       <updated>1707498885041</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Test y parte visual de pasajeros">
+      <option name="closed" value="true" />
+      <created>1707565448481</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1707565448481</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Test y parte visual de pasajeros">
+      <option name="closed" value="true" />
+      <created>1707565495937</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1707565495937</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,17 +241,7 @@
     <MESSAGE value="añadimos métodos y test consultar coche por id, mostrar listado de coche existentes." />
     <MESSAGE value="añadimos parte de presentación con las opciones de Coche" />
     <MESSAGE value="Solucion error debemos eliminar antes los registros relacionados en la tabla cochespasajeros que hacen referencia a la fila que queremos eliminar de coches" />
-    <option name="LAST_COMMIT_MESSAGE" value="Solucion error debemos eliminar antes los registros relacionados en la tabla cochespasajeros que hacen referencia a la fila que queremos eliminar de coches" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/conectores/presentacion/Main.java</url>
-          <line>285</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Test y parte visual de pasajeros" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test y parte visual de pasajeros" />
   </component>
 </project>
