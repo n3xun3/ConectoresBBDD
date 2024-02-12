@@ -8,6 +8,10 @@ import org.conectores.persistencia.DaoPasajeroMySql;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Clase principal que contiene el punto de entrada del programa.
+ */
+
 public class Main {
     private static Scanner scanner = new Scanner(System.in);
     private static DaoCocheMySql daoCoche = new DaoCocheMySql();

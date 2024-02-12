@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="21fbd2cc-58fe-49a6-9f73-8c2cca4869ca" name="Changes" comment="Añadimos javadoc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/negocio/DaoCoche.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/negocio/DaoCoche.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/entidad/Coche.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/entidad/Coche.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/entidad/Pasajero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/entidad/Pasajero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/presentacion/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/presentacion/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,7 +272,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707734859960</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Añadimos javadoc">
+      <option name="closed" value="true" />
+      <created>1707734904710</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1707734904710</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
