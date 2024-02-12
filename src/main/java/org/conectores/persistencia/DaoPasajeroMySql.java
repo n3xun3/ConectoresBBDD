@@ -7,6 +7,9 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Esta clase implementa la interfaz DaoPasajero y proporciona métodos para interactuar con la tabla de pasajeros en una base de datos MySQL.
+ */
 public class DaoPasajeroMySql implements DaoPasajero {
 
     private Connection conexion;

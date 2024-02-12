@@ -4,20 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21fbd2cc-58fe-49a6-9f73-8c2cca4869ca" name="Changes" comment="Añadimos metodo para comprobacion de que marca y modelo deben ser obligatorios">
+    <list default="true" id="21fbd2cc-58fe-49a6-9f73-8c2cca4869ca" name="Changes" comment="Ultimas correcciones de mostrado para requerimientos">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/persistencia/DaoCocheMySql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/persistencia/DaoCocheMySql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/negocio/DaoPasajero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/negocio/DaoPasajero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/persistencia/DaoPasajeroMySql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/persistencia/DaoPasajeroMySql.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/presentacion/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/presentacion/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/test/coche/TestAltaCoche.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/coche/TestAltaCoche.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/test/coche/TestBorrarCoche.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/coche/TestBorrarCoche.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/test/coche/TestconsultarCocheId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/coche/TestconsultarCocheId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/persistencia/DaoCocheMySql.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/conectores/persistencia/DaoCocheMySql.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/persistencia/DaoPasajeroMySql.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/conectores/persistencia/DaoPasajeroMySql.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/presentacion/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/conectores/presentacion/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/test/coche/TestAltaCoche.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/conectores/test/coche/TestAltaCoche.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/test/coche/TestBorrarCoche.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/conectores/test/coche/TestBorrarCoche.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/test/coche/TestconsultarCocheId.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/conectores/test/coche/TestconsultarCocheId.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -265,7 +255,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707664637232</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Ultimas correcciones de mostrado para requerimientos">
+      <option name="closed" value="true" />
+      <created>1707730682872</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1707730682872</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,6 +278,7 @@
     <MESSAGE value="Test y parte visual de pasajeros" />
     <MESSAGE value="Métodos restante de la parte de pasajero para relacionar con coche" />
     <MESSAGE value="Añadimos metodo para comprobacion de que marca y modelo deben ser obligatorios" />
-    <option name="LAST_COMMIT_MESSAGE" value="Añadimos metodo para comprobacion de que marca y modelo deben ser obligatorios" />
+    <MESSAGE value="Ultimas correcciones de mostrado para requerimientos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ultimas correcciones de mostrado para requerimientos" />
   </component>
 </project>
