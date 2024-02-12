@@ -57,7 +57,7 @@ public class DaoCocheMySql implements DaoCoche {
 
         boolean alta = false;
 
-        String query = "insert into coches (MARCA,MOOELO,AÑO) " + " values(?,?,?)";
+        String query = "INSERT INTO coches (MARCA, MODELO, AÑO) VALUES (?, ?, ?)";
 
         if (validarMarcaModeloNoVacios(coche)) {
 

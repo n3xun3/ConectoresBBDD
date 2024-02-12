@@ -7,7 +7,7 @@ public class TestBorrarCoche {
     public static void main(String[] args){
 
         DaoCoche dc = new DaoCocheMySql();
-        int idCoche = 2;
+        int idCoche = 1;
         boolean borrado = dc.borrarCocheId(idCoche);
         if(borrado){
             System.out.println("El coche se ha eliminado.");

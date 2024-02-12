@@ -316,11 +316,12 @@ public class Main {
 
     }
 
-    private static void mostrarListadoPsajeros() {
+    private static boolean mostrarListadoPsajeros() {
         boolean mostrado = daoPasajero.mostrarListadoPasajeros();
         if (!mostrado) {
             System.out.println("Error al mostrar el listado de coches.");
         }
+        return mostrado;
     }
 
     private static void relacionarPasajeroACoche(){

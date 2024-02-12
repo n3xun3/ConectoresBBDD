@@ -235,6 +235,10 @@ public class DaoPasajeroMySql implements DaoPasajero {
         try {
             abrirConexion();
 
+            // Mostrar todos los coches disponibles
+            System.out.println("Coches disponibles:");
+            mostrarCochesDisponibles();
+
             String query = "INSERT INTO CochePasajero (id_coche, id_pasajero) VALUES (?, ?)";
             PreparedStatement ps = conexion.prepareStatement(query);
             ps.setInt(1, idCoche);
@@ -242,6 +246,7 @@ public class DaoPasajeroMySql implements DaoPasajero {
 
             int filasInsertadas = ps.executeUpdate();
             if (filasInsertadas > 0) {
+                System.out.println("Pasajero añadido correctamente al coche con ID: " + idCoche);
                 return true; // Se insertó correctamente
             }
 
@@ -253,10 +258,28 @@ public class DaoPasajeroMySql implements DaoPasajero {
 
         return false; // No se pudo realizar la inserción
     }
+
+    private void mostrarCochesDisponibles() throws SQLException {
+        String query = "SELECT id, marca, modelo, año FROM Coches";
+        PreparedStatement ps = conexion.prepareStatement(query);
+        ResultSet rs = ps.executeQuery();
+
+        while (rs.next()) {
+            int idCoche = rs.getInt("id");
+            String marcaCoche = rs.getString("marca");
+            String modeloCoche = rs.getString("modelo");
+            int añoCoche = rs.getInt("año");
+            System.out.println("ID: " + idCoche + ", Marca: " + marcaCoche + ", Modelo: " + modeloCoche + ", Año: " + añoCoche);
+        }
+    }
     @Override
     public boolean eliminarPasajeroDeCoche(int idPasajero, int idCoche) {
         try {
             abrirConexion();
+
+            // Mostrar todos los coches y sus pasajeros asociados
+            System.out.println("Coches y sus pasajeros asociados antes de la eliminación:");
+            mostrarCochesYPasajeros();
 
             String query = "DELETE FROM CochePasajero WHERE id_pasajero = ? AND id_coche = ?";
             PreparedStatement ps = conexion.prepareStatement(query);
@@ -274,6 +297,27 @@ public class DaoPasajeroMySql implements DaoPasajero {
         }
 
         return false; // No se pudo eliminar la relación pasajero-coche
+    }
+
+    // Método para mostrar todos los coches y sus pasajeros asociados
+    private void mostrarCochesYPasajeros() throws SQLException {
+        String query = "SELECT coches.id AS id, coches.marca, coches.modelo, coches.año, " +
+                "pasajeros.id AS id, pasajeros.nombre AS nombre, pasajeros.edad, pasajeros.peso " +
+                "FROM Coches coches " +
+                "LEFT JOIN CochePasajero cp ON coches.id = cp.id_coche " +
+                "LEFT JOIN Pasajeros pasajeros ON cp.id_pasajero = pasajeros.id";
+
+        PreparedStatement ps = conexion.prepareStatement(query);
+        ResultSet rs = ps.executeQuery();
+
+        while (rs.next()) {
+            int idCoche = rs.getInt("id");
+            String marcaCoche = rs.getString("marca");
+            int idPasajero = rs.getInt("id");
+            String nombrePasajero = rs.getString("nombre");
+
+            System.out.println("Coche ID: " + idCoche + ", Marca: " + marcaCoche + ", Pasajero ID: " + idPasajero + ", Nombre: " + nombrePasajero);
+        }
     }
 
 }

@@ -4,17 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21fbd2cc-58fe-49a6-9f73-8c2cca4869ca" name="Changes" comment="Métodos restante de la parte de pasajero para relacionar con coche">
+    <list default="true" id="21fbd2cc-58fe-49a6-9f73-8c2cca4869ca" name="Changes" comment="Añadimos metodo para comprobacion de que marca y modelo deben ser obligatorios">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/entidad/Coche.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/entidad/Coche.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/persistencia/DaoCocheMySql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/persistencia/DaoCocheMySql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/persistencia/DaoPasajeroMySql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/persistencia/DaoPasajeroMySql.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/presentacion/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/presentacion/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/test/coche/TesrmodificarCochePorId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/coche/TesrmodificarCochePorId.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/test/coche/TestAltaCoche.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/coche/TestAltaCoche.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/test/coche/TestBorrarCoche.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/coche/TestBorrarCoche.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/test/coche/TestconsultarCocheId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/test/coche/TestconsultarCocheId.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/persistencia/DaoCocheMySql.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/conectores/persistencia/DaoCocheMySql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/persistencia/DaoPasajeroMySql.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/conectores/persistencia/DaoPasajeroMySql.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/presentacion/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/conectores/presentacion/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/test/coche/TesrmodificarCochePorId.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/conectores/test/coche/TesrmodificarCochePorId.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/test/coche/TestAltaCoche.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/conectores/test/coche/TestAltaCoche.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/test/coche/TestBorrarCoche.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/conectores/test/coche/TestBorrarCoche.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/conectores/test/coche/TestconsultarCocheId.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/conectores/test/coche/TestconsultarCocheId.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +48,7 @@
     "Application.Main.executor": "Run",
     "Application.TestAltaCoche.executor": "Run",
     "Application.TestAltapasajero.executor": "Run",
+    "Application.TestBorrarCoche.executor": "Run",
     "Application.TestconsultarCocheId.executor": "Run",
     "Application.TestconsultarPasajeroId.executor": "Run",
     "Application.TestmostrarListadoCoches.executor": "Run",
@@ -83,12 +87,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestconsultarPasajeroId" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.conectores.test.pasajero.TestconsultarPasajeroId" />
+    <configuration name="TestAltaCoche" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.conectores.test.coche.TestAltaCoche" />
       <module name="ConectoresBBDD" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.conectores.test.pasajero.*" />
+          <option name="PATTERN" value="org.conectores.test.coche.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -96,12 +100,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestmostrarListadoPasajeros" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.conectores.test.pasajero.TestmostrarListadoPasajeros" />
+    <configuration name="TestBorrarCoche" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.conectores.test.coche.TestBorrarCoche" />
       <module name="ConectoresBBDD" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.conectores.test.pasajero.*" />
+          <option name="PATTERN" value="org.conectores.test.coche.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -109,12 +113,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestobtenerPasajerosPorCoche" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.conectores.test.pasajero.TestobtenerPasajerosPorCoche" />
+    <configuration name="TestconsultarCocheId" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.conectores.test.coche.TestconsultarCocheId" />
       <module name="ConectoresBBDD" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.conectores.test.pasajero.*" />
+          <option name="PATTERN" value="org.conectores.test.coche.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -122,12 +126,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestrelacionarPasajeroACoche" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.conectores.test.pasajero.TestrelacionarPasajeroACoche" />
+    <configuration name="TestmostrarListadoCoches" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.conectores.test.coche.TestmostrarListadoCoches" />
       <module name="ConectoresBBDD" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.conectores.test.pasajero.*" />
+          <option name="PATTERN" value="org.conectores.test.coche.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -138,10 +142,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.TestmostrarListadoPasajeros" />
-        <item itemvalue="Application.TestobtenerPasajerosPorCoche" />
-        <item itemvalue="Application.TestrelacionarPasajeroACoche" />
-        <item itemvalue="Application.TestconsultarPasajeroId" />
+        <item itemvalue="Application.TestBorrarCoche" />
+        <item itemvalue="Application.TestmostrarListadoCoches" />
+        <item itemvalue="Application.TestconsultarCocheId" />
+        <item itemvalue="Application.TestAltaCoche" />
       </list>
     </recent_temporary>
   </component>
@@ -245,7 +249,23 @@
       <option name="project" value="LOCAL" />
       <updated>1707662928260</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Añadimos metodo para comprobacion de que marca y modelo deben ser obligatorios">
+      <option name="closed" value="true" />
+      <created>1707664621119</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1707664621119</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Añadimos metodo para comprobacion de que marca y modelo deben ser obligatorios">
+      <option name="closed" value="true" />
+      <created>1707664637232</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1707664637232</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,6 +279,7 @@
     <MESSAGE value="Solucion error debemos eliminar antes los registros relacionados en la tabla cochespasajeros que hacen referencia a la fila que queremos eliminar de coches" />
     <MESSAGE value="Test y parte visual de pasajeros" />
     <MESSAGE value="Métodos restante de la parte de pasajero para relacionar con coche" />
-    <option name="LAST_COMMIT_MESSAGE" value="Métodos restante de la parte de pasajero para relacionar con coche" />
+    <MESSAGE value="Añadimos metodo para comprobacion de que marca y modelo deben ser obligatorios" />
+    <option name="LAST_COMMIT_MESSAGE" value="Añadimos metodo para comprobacion de que marca y modelo deben ser obligatorios" />
   </component>
 </project>

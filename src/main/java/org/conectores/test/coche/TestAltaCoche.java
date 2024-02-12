@@ -8,8 +8,8 @@ public class TestAltaCoche {
     public static void main(String[] args) {
         Coche coche = new Coche();
         coche.setMarca("Ford");
-        coche.setModelo("Blanco");
         coche.setAño(2024);
+        coche.setModelo("SUV");
 
         DaoCoche dc = new DaoCocheMySql();
         boolean alta = dc.altaCoche(coche);

@@ -8,7 +8,7 @@ public class TestconsultarCocheId {
     public static void main(String[] args){
 
         DaoCoche ps = new DaoCocheMySql();
-        int idCoche = 2;
+        int idCoche = 1;
         Coche borrado = ps.consultarCocheId(idCoche);
         if(borrado != null){
             System.out.println("El pasajero se consulto correctamente.");
