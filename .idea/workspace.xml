@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21fbd2cc-58fe-49a6-9f73-8c2cca4869ca" name="Changes" comment="Ultimas correcciones de mostrado para requerimientos">
+    <list default="true" id="21fbd2cc-58fe-49a6-9f73-8c2cca4869ca" name="Changes" comment="Añadimos javadoc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/negocio/DaoPasajero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/negocio/DaoPasajero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/persistencia/DaoPasajeroMySql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/persistencia/DaoPasajeroMySql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/conectores/negocio/DaoCoche.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conectores/negocio/DaoCoche.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -263,7 +262,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707730682872</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Añadimos javadoc">
+      <option name="closed" value="true" />
+      <created>1707734859960</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1707734859960</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,6 +286,7 @@
     <MESSAGE value="Métodos restante de la parte de pasajero para relacionar con coche" />
     <MESSAGE value="Añadimos metodo para comprobacion de que marca y modelo deben ser obligatorios" />
     <MESSAGE value="Ultimas correcciones de mostrado para requerimientos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ultimas correcciones de mostrado para requerimientos" />
+    <MESSAGE value="Añadimos javadoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Añadimos javadoc" />
   </component>
 </project>
